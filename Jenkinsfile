@@ -1,10 +1,10 @@
 pipeline {
-    agent any
+    agent { label 'master' }
     stages {
         stage('Checkout') {
             steps {
                 // IMPORTANT: Change this URL to your own GitHub repository URL
-                git 'https://github.com/YOUR_USERNAME/flask-ci-demo.git'
+                git 'https://github.com/harshith1729/flask-ci-demo.git'
             }
         }
         stage('Install Dependencies') {
